@@ -40,7 +40,7 @@ class FetchTool {
      */
     send ({url, withCredentials = false, ...options}) {
         return fetch(url, Object.assign({
-            credentials: withCredentials ? 'include' : 'omit'
+            credentials: 'include'
         }, options))
             .then(result => result.text());
     }
